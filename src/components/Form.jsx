@@ -21,8 +21,18 @@ function Form() {
 
   function handleSubmit(event) {
     event.preventDefault()
-    // console.log(input)
+    if (input.todoTitle == '') {
+      alert("Task should have a title")
+      return
+    }
     createTask(input)
+    setInput(_ => {
+      return {
+        taskId: '',
+        todoTitle: '',
+        isComplete: false
+      }
+    })
   }
   return (
     <form onSubmit={handleSubmit}>

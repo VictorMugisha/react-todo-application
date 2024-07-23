@@ -1,9 +1,9 @@
 import React from 'react'
 
-function Task() {
+function Task({task}) {
     return (
         <div className="task-container">
-            <p>Task Title</p>
+            <p>{task.todoTitle}</p>
             <button>
                 <i className="uil uil-trash-alt"></i>
             </button>

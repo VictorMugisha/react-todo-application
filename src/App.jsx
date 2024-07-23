@@ -8,7 +8,7 @@ function App() {
 
   function createTask(task) {
     setAllTasks(prevTasks => {
-      return [...prevTasks, task]
+      return [task, ...prevTasks]
     })
   }
 
