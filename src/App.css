@@ -80,6 +80,10 @@ form button {
   background: rgba(128, 128, 128, 0.221);
 }
 
+.task-container p {
+  font-size: 15px;
+}
+
 .task-container button {
   border: none;
   outline: none;
@@ -91,4 +95,29 @@ form button {
 
 .task-container button:hover {
   color: red;
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer p {
+  font-size: 15px;
+}
+
+.footer button {
+  padding: .5rem 2rem;
+  border: none;
+  outline: none;
+  color: white;
+  background: #227cca;
+  border-radius: .3rem;
+  cursor: pointer;
+}
+
+.footer button:hover {
+  background: #3291e3;
 }
