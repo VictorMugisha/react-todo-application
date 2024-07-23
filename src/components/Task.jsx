@@ -1,10 +1,16 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import MasterContext from '../Contexts/MasterContext'
 
-function Task({task}) {
+function Task({ task }) {
+    const { deleteTask } = useContext(MasterContext)
+    function handleDelete(event) {
+        event.stopPropagation()
+        deleteTask(task.taskId)
+    }
     return (
         <div className="task-container">
             <p>{task.todoTitle}</p>
-            <button>
+            <button onClick={handleDelete}>
                 <i className="uil uil-trash-alt"></i>
             </button>
         </div>
