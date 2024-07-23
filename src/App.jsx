@@ -18,10 +18,15 @@ function App() {
     })
   }
 
+  function deleteAll() {
+    setAllTasks([])
+  }
+
   const providerValue = {
     allTasks,
     createTask,
-    deleteTask
+    deleteTask,
+    deleteAll
   }
 
   return (
