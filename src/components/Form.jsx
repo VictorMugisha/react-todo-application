@@ -2,7 +2,10 @@ import React from 'react'
 
 function Form() {
   return (
-    <div>Form</div>
+    <form>
+        <input type="text" placeholder="Add your new todo" name="todo" />
+        <button><i class="uil uil-plus"></i></button>
+    </form>
   )
 }
 
