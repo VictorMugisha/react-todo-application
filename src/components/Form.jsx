@@ -1,7 +1,11 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
+import { nanoid } from 'nanoid'
+import MasterContext from '../Contexts/MasterContext'
 
 function Form() {
+  const { createTask } = useContext(MasterContext)
   const [input, setInput] = useState({
+    taskId: nanoid(),
     todoTitle: '',
     isComplete: false
   })
@@ -14,10 +18,16 @@ function Form() {
       }
     })
   }
+
+  function handleSubmit(event) {
+    event.preventDefault()
+    // console.log(input)
+    createTask(input)
+  }
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <input type="text" placeholder="Add your new todo" name="todoTitle" value={input.todoTitle} onChange={handleChange} />
-      <button><i class="uil uil-plus"></i></button>
+      <button><i className="uil uil-plus"></i></button>
     </form>
   )
 }

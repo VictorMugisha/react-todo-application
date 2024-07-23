@@ -5,7 +5,7 @@ function Task() {
         <div className="task-container">
             <p>Task Title</p>
             <button>
-                <i class="uil uil-trash-alt"></i>
+                <i className="uil uil-trash-alt"></i>
             </button>
         </div>
     )
